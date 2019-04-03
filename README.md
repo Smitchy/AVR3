@@ -1,1 +1,1 @@
-# Augmented and Virtual Reality - Project #3 -
+# Augmented and Virtual Reality - Project #3 - NAME
