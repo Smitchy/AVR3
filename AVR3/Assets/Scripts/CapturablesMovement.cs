@@ -20,19 +20,25 @@ public class CapturablesMovement : MonoBehaviour {
 
         switch (this.gameObject.tag)
         {
-            case "Tag1": speed = 5;
+            case "Bat": speed = 1;
                 break;
-            case "Tag2": speed = 10;
+            case "Tag2": speed = 3;
                 break;
         }
     }
 
     void PickPosition()
     {
-        currentRandomPos = new Vector3(Random.Range(-randomX, randomX), Random.Range(-randomY, randomY), Random.Range(-randomZ, randomZ);
+        currentRandomPos = new Vector3(Random.Range(-randomX, randomX), Random.Range(-randomY, randomY), Random.Range(-randomZ, randomZ));
         StartCoroutine(MoveToRandomPos());
 
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        PickPosition();
+    }
+
 
     IEnumerator MoveToRandomPos()
     {
@@ -43,7 +49,7 @@ public class CapturablesMovement : MonoBehaviour {
         while (i < 1.0f)
         {
             i += Time.deltaTime * rate;
-            transform.position = Vector3.Lerp(currentPos, currendRandomPos, i);
+            transform.position = Vector3.Lerp(currentPos, currentRandomPos, i);
             yield return null;
         }
 
@@ -56,7 +62,7 @@ public class CapturablesMovement : MonoBehaviour {
 
     IEnumerator WaitForSomeTime()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         PickPosition();
     }
 
