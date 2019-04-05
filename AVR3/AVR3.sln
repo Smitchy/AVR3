@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVR3", "AVR3.csproj", "{FACF3107-6E94-09D8-AB91-D6C93C203F5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVR3.Player", "AVR3.Player.csproj", "{9FFC1F8C-2980-7064-0056-130F59236B0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AVR3.Editor", "AVR3.Editor.csproj", "{8E633CD9-0A75-6166-78B3-D6D1A56056B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FACF3107-6E94-09D8-AB91-D6C93C203F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACF3107-6E94-09D8-AB91-D6C93C203F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACF3107-6E94-09D8-AB91-D6C93C203F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACF3107-6E94-09D8-AB91-D6C93C203F5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FFC1F8C-2980-7064-0056-130F59236B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FFC1F8C-2980-7064-0056-130F59236B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FFC1F8C-2980-7064-0056-130F59236B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FFC1F8C-2980-7064-0056-130F59236B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E633CD9-0A75-6166-78B3-D6D1A56056B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E633CD9-0A75-6166-78B3-D6D1A56056B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E633CD9-0A75-6166-78B3-D6D1A56056B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E633CD9-0A75-6166-78B3-D6D1A56056B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
