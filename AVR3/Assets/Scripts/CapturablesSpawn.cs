@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CapturablesSpawn : MonoBehaviour
 {
-
-    public int numberToSpawn;
+    
     public float spawningInterval;
     public float spawningRadius;
 
@@ -31,7 +30,7 @@ public class CapturablesSpawn : MonoBehaviour
 
     IEnumerator SpawningRoutine()
     {
-        while (numberSpawned < numberToSpawn)
+        while (while)
         {
             ChooseSpawnPosition();
             Instantiate(capturables[Random.Range(0, 5)], spawnPosition, Quaternion.identity);
