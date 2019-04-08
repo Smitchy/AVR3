@@ -69,4 +69,5 @@ public class CapturablesMovement : MonoBehaviour, IInputClickHandler{
     {
         captured = true;
     }
+
 }

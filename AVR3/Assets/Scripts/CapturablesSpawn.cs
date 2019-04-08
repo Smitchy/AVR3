@@ -12,16 +12,18 @@ public class CapturablesSpawn : MonoBehaviour
     private Vector3 spawnPosition;
     private Vector3 cameraPos;
 
+    private int arrayLength;
+
     public GameObject[] capturables;
 
     void Start ()
     {
         numberSpawned = 0;
+        arrayLength = 2;
         cameraPos = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
        
         StartCoroutine(SpawningRoutine());
     }
-	
 
     void ChooseSpawnPosition()
     {
@@ -33,7 +35,24 @@ public class CapturablesSpawn : MonoBehaviour
         while (true)
         {
             ChooseSpawnPosition();
-            Instantiate(capturables[Random.Range(0, 5)], spawnPosition, Quaternion.identity);
+            GameObject capt = Instantiate(capturables[Random.Range(0, arrayLength)], spawnPosition, Quaternion.identity);
+            float newScale = Random.Range(3f, 6f);
+            capt.transform.localScale = new Vector3(newScale, newScale, newScale);
+            numberSpawned++;
+            switch (numberSpawned)
+            {
+                case 5:
+                    arrayLength += 2;
+                    break;
+
+                case 10:
+                    arrayLength += 2;
+                    break;
+
+                case 15:
+                    arrayLength += 2;
+                    break;
+            }
             yield return new WaitForSeconds(spawningInterval - numberSpawned/5.0f);
         }
     }
