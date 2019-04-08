@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HoloToolkit.Unity.InputModule;
 
-public class CapturablesMovement : MonoBehaviour{
+public class CapturablesMovement : MonoBehaviour, IInputClickHandler{
 
     public float speed;
     private float randomX;
     private float randomZ;
     private float randomY;
     private Vector3 currentRandomPos;
+    private bool captured = false;
 
 
     void Start()
@@ -35,22 +37,26 @@ public class CapturablesMovement : MonoBehaviour{
 
     IEnumerator MoveToRandomPos()
     {
-        float i = 0.0f;
-        float rate = 1.0f / speed;
-        Vector3 currentPos = transform.position;
-
-        while (i < 1.0f)
+        if (!captured)
         {
-            i += Time.deltaTime * rate;
-            transform.position = Vector3.Lerp(currentPos, currentRandomPos, i);
-            yield return null;
-        }
+            float i = 0.0f;
+            float rate = 1.0f / speed;
+            Vector3 currentPos = transform.position;
 
-        float randomFloat = Random.Range(0.0f, 1.0f); // Create %50 chance to wait
-        if (randomFloat < 0.5f)
-            StartCoroutine(WaitForSomeTime());
-        else
+            while (i < 1.0f)
+            {
+                i += Time.deltaTime * rate;
+                transform.position = Vector3.Lerp(currentPos, currentRandomPos, i);
+                yield return null;
+            }
+
+            float randomFloat = Random.Range(0.0f, 1.0f); // Create %50 chance to wait
+            if (randomFloat < 0.5f)
+                StartCoroutine(WaitForSomeTime());
+            else
             PickPosition();
+        }
+        
     }
 
     IEnumerator WaitForSomeTime()
@@ -59,5 +65,8 @@ public class CapturablesMovement : MonoBehaviour{
         PickPosition();
     }
 
-
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        captured = true;
+    }
 }

@@ -747,6 +747,8 @@
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UICollection.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityScaler.cs" />
     <Compile Include="Assets\HoloToolkit\UX\Scripts\UsabilityUtilities.cs" />
+    <Compile Include="Assets\RPGPackFree\Scripts\BowString.cs" />
+    <Compile Include="Assets\RPGPackFree\Scripts\OpenChest.cs" />
     <Compile Include="Assets\Scripts\CapturablesMovement.cs" />
     <Compile Include="Assets\Scripts\CapturablesSpawn.cs" />
     <Compile Include="Assets\Scripts\MoveMonster.cs" />
