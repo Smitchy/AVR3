@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CapturablesMovement : MonoBehaviour {
+public class CapturablesMovement : MonoBehaviour{
 
     public float speed;
     private float randomX;

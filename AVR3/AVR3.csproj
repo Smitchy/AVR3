@@ -750,6 +750,7 @@
     <Compile Include="Assets\Scripts\CapturablesMovement.cs" />
     <Compile Include="Assets\Scripts\CapturablesSpawn.cs" />
     <Compile Include="Assets\Scripts\MoveMonster.cs" />
+    <Compile Include="Assets\Scripts\ScoreSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\BlinnPhongConfigurable.cginc" />

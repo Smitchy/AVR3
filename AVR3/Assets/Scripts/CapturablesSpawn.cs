@@ -30,7 +30,7 @@ public class CapturablesSpawn : MonoBehaviour
 
     IEnumerator SpawningRoutine()
     {
-        while (while)
+        while (true)
         {
             ChooseSpawnPosition();
             Instantiate(capturables[Random.Range(0, 5)], spawnPosition, Quaternion.identity);
