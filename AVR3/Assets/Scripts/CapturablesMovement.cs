@@ -17,19 +17,12 @@ public class CapturablesMovement : MonoBehaviour {
         randomX = Random.Range(-2f, 2f);
         randomY = Random.Range(-2f, 2f);
         randomZ = Random.Range(-2f, 2f);
-
-        switch (this.gameObject.tag)
-        {
-            case "Bat": speed = 1;
-                break;
-            case "Tag2": speed = 3;
-                break;
-        }
     }
 
     void PickPosition()
     {
         currentRandomPos = new Vector3(Random.Range(-randomX, randomX), Random.Range(-randomY, randomY), Random.Range(-randomZ, randomZ));
+        transform.LookAt(new Vector3(currentRandomPos.x,transform.position.y,currentRandomPos.z));
         StartCoroutine(MoveToRandomPos());
 
     }
