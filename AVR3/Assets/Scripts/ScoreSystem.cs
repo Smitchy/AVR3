@@ -35,9 +35,8 @@ public class ScoreSystem : MonoBehaviour
 
     void Update()
     {
-        numberOfCapturables = CountCapturables();
 
-        score.text = "" + numberOfCapturables + "\n Caught: "+numberCaught;
+        score.text = "Caught: "+numberCaught;
 
         if (numberOfCapturables >= numberAllowed)
         {
@@ -45,16 +44,12 @@ public class ScoreSystem : MonoBehaviour
         }
     }
 
-    int CountCapturables()
-    {
-        numberOfCapturables += GameObject.FindGameObjectsWithTag("Bat").Length;
-        return numberOfCapturables;
-    }
 
     void YouLost()
     {
 
     }
+
     public void Catch(){
         numberCaught++;
     }
