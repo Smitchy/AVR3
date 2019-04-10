@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using HoloToolkit.Unity.InputModule;
+using System;
 
 public class Capture : MonoBehaviour, IInputClickHandler {
 
@@ -15,7 +16,12 @@ public class Capture : MonoBehaviour, IInputClickHandler {
     {
         captured = false;
         movement = GetComponent<CapturablesMovement>();
-        iCapture += MovementToggle;
+        iCapture += ToggleDragAble;
+    }
+
+    private void ToggleDragAble()
+    {
+        GetComponent<HandDraggable>().IsDraggingEnabled = true;
     }
 
     public void OnInputClicked(InputClickedEventData eventData)
@@ -23,9 +29,4 @@ public class Capture : MonoBehaviour, IInputClickHandler {
         iCapture();
     }
 
-    private void MovementToggle()
-    {
-        captured = !captured;
-        movement.enabled = captured;
-    }
 }

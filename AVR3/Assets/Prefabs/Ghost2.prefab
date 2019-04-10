@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 65390866992719298}
   - component: {fileID: 114001981327924356}
   - component: {fileID: 114350314820450162}
+  - component: {fileID: 114402464055091632}
   m_Layer: 0
   m_Name: Ghost2
   m_TagString: Untagged
@@ -436,7 +437,18 @@ MonoBehaviour:
   RotationMode: 0
   PositionLerpSpeed: 0.2
   RotationLerpSpeed: 0.2
-  IsDraggingEnabled: 1
+  IsDraggingEnabled: 0
+--- !u!114 &114402464055091632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1076530355460218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77a4ca1516d220489dfc78f52a81e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137239943015562804
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

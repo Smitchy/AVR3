@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 65871923884223872}
   - component: {fileID: 114986730737222432}
   m_Layer: 0
-  m_Name: Death_Chest
+  m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

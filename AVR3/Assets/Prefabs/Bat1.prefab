@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 114685131006900566}
   - component: {fileID: 54104869340817650}
   - component: {fileID: 114681002085049438}
+  - component: {fileID: 114168378655071458}
   m_Layer: 31
   m_Name: Bat1
   m_TagString: Bat
@@ -1324,6 +1325,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114168378655071458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1814342334790636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77a4ca1516d220489dfc78f52a81e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114681002085049438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1352,7 +1364,7 @@ MonoBehaviour:
   RotationMode: 0
   PositionLerpSpeed: 0.2
   RotationLerpSpeed: 0.2
-  IsDraggingEnabled: 1
+  IsDraggingEnabled: 0
 --- !u!135 &135171630232354058
 SphereCollider:
   m_ObjectHideFlags: 1

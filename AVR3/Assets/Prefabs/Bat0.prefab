@@ -520,6 +520,7 @@ GameObject:
   - component: {fileID: 114270889397296802}
   - component: {fileID: 54602689946724150}
   - component: {fileID: 114788196667123250}
+  - component: {fileID: 114285329901285914}
   m_Layer: 31
   m_Name: Bat0
   m_TagString: Bat
@@ -1340,7 +1341,18 @@ MonoBehaviour:
   RotationMode: 0
   PositionLerpSpeed: 0.2
   RotationLerpSpeed: 0.2
-  IsDraggingEnabled: 1
+  IsDraggingEnabled: 0
+--- !u!114 &114285329901285914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789349813886092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b77a4ca1516d220489dfc78f52a81e19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114788196667123250
 MonoBehaviour:
   m_ObjectHideFlags: 1
