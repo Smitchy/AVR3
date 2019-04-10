@@ -9,6 +9,5 @@ public class ChestCapture : MonoBehaviour {
 	private void OnTriggerEnter(Collider other) {
 		ScoreSystem.Instance.Catch();
 		Destroy(other.gameObject);
-		anim.SetBool("open", false);
 	}
 }

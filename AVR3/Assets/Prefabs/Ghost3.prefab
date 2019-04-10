@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4239934439826408}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: HeadControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4426031214730522}
   - component: {fileID: 137008556552713242}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: LV1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456800587322566}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: MESH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 114655431807489886}
   - component: {fileID: 114750493775951082}
   - component: {fileID: 82472264622925314}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Ghost3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4398086174584934}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4370319660299928}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: RootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4347491579546192}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: HeadTipJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4795045072431782}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: RootControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4456110112261794}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: TailJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4555457227827394}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: RIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4013131924824914}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: GhostControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4602246105861546}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: TailControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}

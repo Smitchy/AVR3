@@ -15,7 +15,8 @@ public class ScoreSystem : MonoBehaviour
 
     private int numberCaught;
 
-    public Text score;
+    public Text score, timer;
+    private int time;
 
     void Awake() {
         if(instance != null && instance != this)
@@ -31,6 +32,17 @@ public class ScoreSystem : MonoBehaviour
     {
         numberOfCapturables = 0;
         numberCaught = 0;
+        time = 30;
+    }
+
+    IEnumerable TimerRoutine()
+    {
+        while(time > 0)
+        {
+            time--;
+            yield return new WaitForSeconds(1);
+        }
+        YouLost();
     }
 
     void Update()
@@ -47,10 +59,11 @@ public class ScoreSystem : MonoBehaviour
 
     void YouLost()
     {
-
+        Debug.Log("You Lost");
     }
 
     public void Catch(){
         numberCaught++;
+        time += 5;
     }
 }

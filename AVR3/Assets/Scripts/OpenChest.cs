@@ -1,11 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using HoloToolkit.Unity.InputModule;
 
-public class OpenChest : MonoBehaviour {
+public class OpenChest : MonoBehaviour, IInputHandler {
+
 	public Animator anim;
 
-	private void OnTriggerEnter(Collider other) {
-		anim.SetBool("open", true);
-	}
+    public void OnInputDown(InputEventData eventData)
+    {
+        anim.SetBool("open", true);
+    }
+
+    public void OnInputUp(InputEventData eventData)
+    {
+        anim.SetBool("open", false);
+    }
+
 }

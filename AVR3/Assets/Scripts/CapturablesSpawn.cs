@@ -53,7 +53,7 @@ public class CapturablesSpawn : MonoBehaviour
                     arrayLength += 2;
                     break;
             }
-            yield return new WaitForSeconds(spawningInterval - numberSpawned/5.0f);
+            yield return new WaitForSeconds(spawningInterval);
         }
     }
 }
