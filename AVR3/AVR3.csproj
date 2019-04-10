@@ -762,6 +762,7 @@
     <Compile Include="Assets\Scripts\MoveMonster.cs" />
     <Compile Include="Assets\Scripts\OpenChest.cs" />
     <Compile Include="Assets\Scripts\ScoreSystem.cs" />
+    <Compile Include="Assets\StopAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\BlinnPhongConfigurable.cginc" />
