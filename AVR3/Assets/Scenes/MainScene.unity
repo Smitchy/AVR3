@@ -690,7 +690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -64.9, y: -131.6}
+  m_AnchoredPosition: {x: -64.899994, y: -131.6}
   m_SizeDelta: {x: -339.1, y: 195.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360888840
@@ -904,7 +904,7 @@ MonoBehaviour:
   chest: {fileID: 117430, guid: f56df44f2436f1f42821acb8fe1ec8d1, type: 2}
   cameraPos: {fileID: 1997997751}
   cursorPos: {fileID: 860219363}
-  rules: {fileID: 0}
+  rules: {fileID: 1360888838}
 --- !u!114 &1997997755
 MonoBehaviour:
   m_ObjectHideFlags: 0

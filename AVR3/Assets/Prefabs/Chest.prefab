@@ -28,7 +28,7 @@ GameObject:
   - component: {fileID: 448142}
   - component: {fileID: 9594588}
   - component: {fileID: 65871923884223872}
-  - component: {fileID: 114986730737222432}
+  - component: {fileID: 114350615504631836}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -310,7 +310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 9594588}
---- !u!114 &114986730737222432
+  particles: []
+--- !u!114 &114350615504631836
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -318,7 +319,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 117430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d5eeb9136a06fe40a524bb8b99c5987, type: 3}
+  m_Script: {fileID: 11500000, guid: 374e7ff43da63af429170069d9b7d64b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 9594588}
+  anim: {fileID: 0}
+  particles:
+  - {fileID: 100672, guid: 7dc0b63f67faaf9479803bcfdff7f71e, type: 2}
+  - {fileID: 123640, guid: 9242b15a276bc5a4babd09239e5fa709, type: 2}
+  - {fileID: 138338, guid: cd1ff9e92aad8ac4db78b6ffd5f1eab7, type: 2}
+  - {fileID: 136674, guid: 8d3a7fbc62f810c43b8c42fdb2978ef4, type: 2}
+  - {fileID: 153390, guid: 3c2d41265118fc14f8065fbfc45391d0, type: 2}
+  - {fileID: 180950, guid: f2a398acbf213024aa23b14c390770bf, type: 2}
