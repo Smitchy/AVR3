@@ -8,6 +8,12 @@ public class ChestSpawn : MonoBehaviour, IInputHandler{
     public GameObject chest;
     public Transform cameraPos, cursorPos;
     private bool spawned = false;
+    public GameObject rules;
+
+    void Start()
+    {
+        rules.SetActive(true);
+    }
 
     public void OnInputDown(InputEventData eventData)
     {
@@ -16,6 +22,7 @@ public class ChestSpawn : MonoBehaviour, IInputHandler{
         if (Physics.Raycast(cameraPos.position, cursorPos.position-cameraPos.position, out hit))
         {
             Instantiate(chest, hit.point + new Vector3(0, 0.185f, 0), Quaternion.Euler(0f, 180f, 0f));
+            rules.SetActive(false);
             spawned = true;
         }
     }
