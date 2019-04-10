@@ -578,6 +578,7 @@
      <Compile Include="Assets\Scripts\MoveMonster.cs" />
      <Compile Include="Assets\Scripts\OpenChest.cs" />
      <Compile Include="Assets\Scripts\ScoreSystem.cs" />
+     <Compile Include="Assets\StopAnimator.cs" />
      <None Include="Assets\HoloToolkit\Utilities\Scripts\GLTF\Shaders\GLTFConstant.cginc" />
      <None Include="Assets\Low Poly Toon Chests\Readme.txt" />
      <None Include="Assets\HoloToolkit\Common\Shaders\Obsolete\UnlitConfigurable.shader" />
