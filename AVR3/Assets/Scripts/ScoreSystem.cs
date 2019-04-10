@@ -38,7 +38,7 @@ public class ScoreSystem : MonoBehaviour
         Time.timeScale = 1f;
         numberOfCapturables = 0;
         numberCaught = 0;
-        time = 30;
+        time = 10;
         StartCoroutine(TimerRoutine());
         defaultColor = timer.color;
 
@@ -50,7 +50,7 @@ public class ScoreSystem : MonoBehaviour
 
     void Restart()
     {
-        SceneManager.LoadScene(0);
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     IEnumerator TimerRoutine()
@@ -59,6 +59,10 @@ public class ScoreSystem : MonoBehaviour
         {
             time--;
             yield return new WaitForSeconds(1);
+        }
+        if (time == 0)
+        {
+            YouLost();
         }
     }
 
@@ -87,10 +91,6 @@ public class ScoreSystem : MonoBehaviour
             score.color = defaultColor;
         }
 
-        if (time == 0)
-        {
-            YouLost();
-        }
 
     }
 
