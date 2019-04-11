@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using HoloToolkit.Unity.InputModule;
 
-public class ScoreSystem : MonoBehaviour
-{
+public class ScoreSystem : MonoBehaviour, IInputHandler{
+
     private static ScoreSystem instance = null;
     public static ScoreSystem Instance{ 
         get {return instance;}
@@ -15,6 +16,7 @@ public class ScoreSystem : MonoBehaviour
     private int numberAllowed;
 
     private int numberCaught;
+    private bool lost = false;
 
     public Text score, timer;
     private int time;
@@ -44,14 +46,12 @@ public class ScoreSystem : MonoBehaviour
         defaultColor = timer.color;
 
         gameOver.SetActive(false);
-        restartB.gameObject.SetActive(false);
         startGame.iStartGame += StartTimer;
-        restartB.onClick.AddListener(Restart);
     }
 
     void Restart()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator TimerRoutine()
@@ -91,8 +91,6 @@ public class ScoreSystem : MonoBehaviour
             timer.color = defaultColor;
             score.color = defaultColor;
         }
-
-
     }
 
     void YouLost()
@@ -100,6 +98,7 @@ public class ScoreSystem : MonoBehaviour
         gameOver.SetActive(true);
         restartB.gameObject.SetActive(true);
         Time.timeScale = 0f;
+        lost = true;
     }
 
     public void Catch(){
@@ -109,7 +108,17 @@ public class ScoreSystem : MonoBehaviour
 
     private void StartTimer()
     {
-        Debug.Log("Score System");
         StartCoroutine(TimerRoutine());
+    }
+
+    public void OnInputDown(InputEventData eventData)
+    {
+        if (lost) Restart();
+        lost = false;
+    }
+
+    public void OnInputUp(InputEventData eventData)
+    {
+        return;
     }
 }

@@ -27,7 +27,6 @@ public class CapturablesSpawn : MonoBehaviour
 
     private void StartSpawning()
     {
-        Debug.Log("startSpawn");
         StartCoroutine(SpawningRoutine());
     }
 

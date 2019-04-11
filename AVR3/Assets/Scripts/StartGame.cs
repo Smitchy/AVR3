@@ -19,14 +19,17 @@ public class StartGame : MonoBehaviour, IInputHandler {
 
     private void DisableRules()
     {
-        Debug.Log("DisableRules");
         rules.SetActive(false);
     }
 
     public void OnInputDown(InputEventData eventData)
     {
-        Debug.Log("Start Game");
-        iStartGame();
+        if (!gameStarted)
+        {
+            iStartGame();
+            gameStarted = true;
+        }
+
     }
 
     public void OnInputUp(InputEventData eventData)

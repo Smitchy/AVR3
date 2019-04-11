@@ -15,7 +15,6 @@ public class ChestSpawn : MonoBehaviour{
 
     private void SpawnChest()
     {
-        Debug.Log("ChestSpawn");
         RaycastHit hit;
         if (Physics.Raycast(cameraPos.position, cursorPos.position - cameraPos.position, out hit))
         {
