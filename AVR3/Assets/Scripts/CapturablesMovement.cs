@@ -13,7 +13,7 @@ public class CapturablesMovement : MonoBehaviour{
     private float randomY;
     private Vector3 currentRandomPos;
     public bool captured = false;
-
+    private IEnumerator curMovement;
     void Start()
     {
         PickPosition();
@@ -26,17 +26,21 @@ public class CapturablesMovement : MonoBehaviour{
     private void StopMoving()
     {
         captured = true;
-        StopCoroutine(MoveToRandomPos());
+        StopCoroutine(curMovement);
         StopCoroutine(WaitForSomeTime());
     }
 
     void PickPosition()
     {
         if (captured) return;
+        if(curMovement != null)
+        {
+            StopCoroutine(curMovement);
+        }
         currentRandomPos = new Vector3(Random.Range(-randomX, randomX), Random.Range(-randomY, randomY), Random.Range(-randomZ, randomZ));
         transform.LookAt(new Vector3(currentRandomPos.x,transform.position.y,currentRandomPos.z));
-        StartCoroutine(MoveToRandomPos());
-
+        curMovement = MoveToRandomPos();
+        StartCoroutine(curMovement);
     }
 
     private void OnCollisionEnter(Collision other)

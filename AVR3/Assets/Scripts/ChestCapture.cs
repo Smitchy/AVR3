@@ -27,6 +27,5 @@ public class ChestCapture : MonoBehaviour {
         GameObject part = Instantiate(particles[Random.Range(0, particles.Length)], transform.position, Quaternion.identity);
         yield return new WaitForSeconds(2f);
         Destroy(part);
-
     }
 }

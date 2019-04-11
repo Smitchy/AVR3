@@ -12,7 +12,6 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
         get {return instance;}
     }
     
-    private int numberOfCapturables;
     private int numberAllowed;
 
     private int numberCaught;
@@ -20,6 +19,7 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
 
     public Text score, timer;
     private int time;
+    public int startTime;
 
     private Color defaultColor;
     public GameObject gameOver;
@@ -38,9 +38,8 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
     void Start()
     {
         Time.timeScale = 1f;
-        numberOfCapturables = 0;
         numberCaught = 0;
-        time = 30;
+        time = startTime;
         
         defaultColor = timer.color;
 
@@ -55,7 +54,7 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
         startGame.rules.SetActive(true);
         gameOver.SetActive(false);
         GameObject[] spawnAbles = GameObject.FindGameObjectsWithTag("SpawnAble");
-        time = 30;
+        time = startTime;
         numberCaught = 0;
         for(int i = 0; i < spawnAbles.Length; i++)
         {

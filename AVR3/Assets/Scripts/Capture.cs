@@ -8,15 +8,11 @@ public class Capture : MonoBehaviour, IInputClickHandler {
 
     public delegate void ICapture();
     public ICapture iCapture;
-
-    private bool captured;
-    private CapturablesMovement movement;
+    
     private SphereCollider col;
 
     private void Start()
     {
-        captured = false;
-        movement = GetComponent<CapturablesMovement>();
         iCapture += ToggleDragAble;
         col = GetComponent<SphereCollider>();
     }

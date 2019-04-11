@@ -360,9 +360,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1436125332}
   - {fileID: 2146639990}
   - {fileID: 2060753445}
-  - {fileID: 1436125332}
   m_Father: {fileID: 1997997751}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -486,7 +486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1436125332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -498,11 +498,11 @@ RectTransform:
   m_LocalScale: {x: 1.54634, y: 1.5463398, z: 1.5463398}
   m_Children: []
   m_Father: {fileID: 762654100}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: -125.5}
+  m_AnchoredPosition: {x: 9, y: -162}
   m_SizeDelta: {x: -750.2, y: 99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1436125333
@@ -524,7 +524,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 5090635b5788f5a428240adb7a4213ef, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6b893ba980546bd43b6757ce87e32634, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23ed866841923e48b6752b8c8791289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawningInterval: 5
+  spawningInterval: 10
   spawningRadius: 1.5
   startGame: {fileID: 1997997758}
   capturables:
@@ -775,8 +775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 2146639991}
   timer: {fileID: 2060753446}
+  startTime: 60
   gameOver: {fileID: 1436125331}
-  restartB: {fileID: 0}
   startGame: {fileID: 1997997758}
 --- !u!114 &1997997758
 MonoBehaviour:
@@ -790,6 +790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rules: {fileID: 2098591851}
+  gameStarted: 0
 --- !u!1 &2032499592 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1372541880982678, guid: d29bc40b7f3df26479d6a0aac211c355,
@@ -836,7 +837,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 762654100}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1016,7 +1017,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 762654100}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}

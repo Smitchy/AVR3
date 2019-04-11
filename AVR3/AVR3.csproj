@@ -758,7 +758,6 @@
     <Compile Include="Assets\Scripts\Capture.cs" />
     <Compile Include="Assets\Scripts\ChestCapture.cs" />
     <Compile Include="Assets\Scripts\ChestSpawn.cs" />
-    <Compile Include="Assets\Scripts\ChestStorage.cs" />
     <Compile Include="Assets\Scripts\MoveMonster.cs" />
     <Compile Include="Assets\Scripts\OpenChest.cs" />
     <Compile Include="Assets\Scripts\ScoreSystem.cs" />

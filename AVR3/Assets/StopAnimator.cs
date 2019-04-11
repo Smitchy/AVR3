@@ -12,7 +12,7 @@ public class StopAnimator : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         frames++;
-        if(frames> 29)
+        if(frames> 23)
         {
             animator.enabled = false;
         }
