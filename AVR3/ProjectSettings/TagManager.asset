@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bat
+  - SpawnAble
   layers:
   - Default
   - TransparentFX

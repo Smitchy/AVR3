@@ -23,7 +23,6 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
 
     private Color defaultColor;
     public GameObject gameOver;
-    public Button restartB;
     public StartGame startGame;
 
     void Awake() {
@@ -51,7 +50,18 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
 
     void Restart()
     {
-        SceneManager.LoadScene(0);
+        lost = false;
+        startGame.gameStarted = false;
+        startGame.rules.SetActive(true);
+        gameOver.SetActive(false);
+        GameObject[] spawnAbles = GameObject.FindGameObjectsWithTag("SpawnAble");
+        time = 30;
+        numberCaught = 0;
+        for(int i = 0; i < spawnAbles.Length; i++)
+        {
+            Destroy(spawnAbles[i]);
+        }
+        Time.timeScale = 1f;
     }
 
     IEnumerator TimerRoutine()
@@ -96,7 +106,6 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
     void YouLost()
     {
         gameOver.SetActive(true);
-        restartB.gameObject.SetActive(true);
         Time.timeScale = 0f;
         lost = true;
     }
@@ -114,7 +123,6 @@ public class ScoreSystem : MonoBehaviour, IInputHandler{
     public void OnInputDown(InputEventData eventData)
     {
         if (lost) Restart();
-        lost = false;
     }
 
     public void OnInputUp(InputEventData eventData)

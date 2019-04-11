@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 82880921653639586}
   m_Layer: 31
   m_Name: Bat1
-  m_TagString: Bat
+  m_TagString: SpawnAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

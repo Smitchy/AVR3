@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour, IInputHandler {
     public IStartGame iStartGame;
     public GameObject rules;
 
-    private bool gameStarted = false;
+    public bool gameStarted = false;
 
     private void Start()
     {

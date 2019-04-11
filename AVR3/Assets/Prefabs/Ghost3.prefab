@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 82472264622925314}
   m_Layer: 31
   m_Name: Ghost3
-  m_TagString: Untagged
+  m_TagString: SpawnAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

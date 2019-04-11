@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 82796868771494034}
   m_Layer: 31
   m_Name: Ghost0
-  m_TagString: Untagged
+  m_TagString: SpawnAble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
