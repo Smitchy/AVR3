@@ -12,7 +12,7 @@ public class CapturablesMovement : MonoBehaviour{
     private float randomZ;
     private float randomY;
     private Vector3 currentRandomPos;
-    private bool captured = false;
+    public bool captured = false;
 
     void Start()
     {
