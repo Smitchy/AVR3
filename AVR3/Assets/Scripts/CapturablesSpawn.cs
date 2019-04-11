@@ -7,6 +7,7 @@ public class CapturablesSpawn : MonoBehaviour
     
     public float spawningInterval;
     public float spawningRadius;
+    public StartGame startGame;
 
     private int numberSpawned;
     private Vector3 spawnPosition;
@@ -21,7 +22,12 @@ public class CapturablesSpawn : MonoBehaviour
         numberSpawned = 0;
         arrayLength = 2;
         cameraPos = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
-       
+        startGame.iStartGame += StartSpawning;
+    }
+
+    private void StartSpawning()
+    {
+        Debug.Log("startSpawn");
         StartCoroutine(SpawningRoutine());
     }
 

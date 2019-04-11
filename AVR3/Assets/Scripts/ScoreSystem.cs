@@ -22,6 +22,7 @@ public class ScoreSystem : MonoBehaviour
     private Color defaultColor;
     public GameObject gameOver;
     public Button restartB;
+    public StartGame startGame;
 
     void Awake() {
         if(instance != null && instance != this)
@@ -31,20 +32,20 @@ public class ScoreSystem : MonoBehaviour
         }
         else
             instance = this;
-        }
+    }
 
     void Start()
     {
         Time.timeScale = 1f;
         numberOfCapturables = 0;
         numberCaught = 0;
-        time = 10;
-        StartCoroutine(TimerRoutine());
+        time = 30;
+        
         defaultColor = timer.color;
 
         gameOver.SetActive(false);
         restartB.gameObject.SetActive(false);
-
+        startGame.iStartGame += StartTimer;
         restartB.onClick.AddListener(Restart);
     }
 
@@ -104,5 +105,11 @@ public class ScoreSystem : MonoBehaviour
     public void Catch(){
         numberCaught++;
         time += 6;
+    }
+
+    private void StartTimer()
+    {
+        Debug.Log("Score System");
+        StartCoroutine(TimerRoutine());
     }
 }

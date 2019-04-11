@@ -1,34 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HoloToolkit.Unity.InputModule;
 
-public class ChestSpawn : MonoBehaviour, IInputHandler{
+public class ChestSpawn : MonoBehaviour{
 
     public GameObject chest;
     public Transform cameraPos, cursorPos;
-    private bool spawned = false;
-    public GameObject rules;
+    public StartGame startGame;
 
-    void Start()
+    private void Start()
     {
-        rules.SetActive(true);
+        startGame.iStartGame += SpawnChest;
     }
 
-    public void OnInputDown(InputEventData eventData)
+    private void SpawnChest()
     {
-        if (spawned) return;
+        Debug.Log("ChestSpawn");
         RaycastHit hit;
-        if (Physics.Raycast(cameraPos.position, cursorPos.position-cameraPos.position, out hit))
+        if (Physics.Raycast(cameraPos.position, cursorPos.position - cameraPos.position, out hit))
         {
             Instantiate(chest, hit.point + new Vector3(0, 0.185f, 0), Quaternion.Euler(0f, 180f, 0f));
-            rules.SetActive(false);
-            spawned = true;
         }
     }
 
-    public void OnInputUp(InputEventData eventData)
-    {
-        return;
-    }
 }
